@@ -27,7 +27,7 @@ function validatePhone() {
         return false;
     }
     if (phone.length !== 12 || !phone.match(/^[0-9]{12}$/)) {
-        phoneError.innerHTML = 'Nomor telepon harus 12 digit angka';
+        phoneError.innerHTML = 'Nomor harus 12 digit angka';
         return false;
     }
     phoneError.innerHTML = '<i class="fas fa-check-circle"></i>';

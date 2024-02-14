@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validating</title>
-    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,22 +14,22 @@
             <div class="input-group">
                 <label>Full name</label>
                 <input type="text" class="input" placeholder="Enter your Full name" name="fullname" id="contact-name" onkeyup="validateName()">
-                <span id="name-error"></span>
+                <span id="name-error">Masukkan nama anda</span>
             </div>
             <div class="input-group">
                 <label>Phone No.</label>
                 <input type="tel" class="input" placeholder="123 456 7890" name="phone" id="contact-phone" onkeyup="validatePhone()">
-                <span id="phone-error"></span>
+                <span id="phone-error">Masukkan nomor telpon anda</span>
             </div>
             <div class="input-group">
                 <label>Email</label>
                 <input type="email" class="input" placeholder="Enter your Email" name="email" id="contact-email" onkeyup="validateEmail()">
-                <span id="email-error"></span>
+                <span id="email-error">Masukkan email anda</span>
             </div>
             <div class="input-group">
                 <label>Message</label>
                 <textarea rows="5" class="input" placeholder="Enter your Message" name="message" id="contact-message" onkeyup="validateMessage()"></textarea>
-                <span id="message-error"></span>
+                <span id="message-error">Tolong masukkan pesan (minimal 30 karakter)</span>
             </div>
             <button onclick="return validateForm()">Submit</button>
             <span id="submit-error"></span>
