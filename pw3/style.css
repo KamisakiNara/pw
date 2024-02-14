@@ -13,7 +13,7 @@
     justify-content: center;
 }
 .container form{
-    width: 95%;
+    width: 90%;
     max-width: 500px;
     padding: 50px 30px 20px;
     background: #fff;
@@ -44,7 +44,7 @@
 }
 
 .input-group input, .input-group textarea{
-    flex-basis: 68%;
+    flex-basis: 71%;
     background: transparent;
     border: 0;
     outline: 0;
@@ -70,7 +70,7 @@ form button{
 .input-group span{
     position: absolute;
     bottom: 12px;
-    right: 17px;
+    right: 5px;
     font-size: 14px;
     color: red;
 }
