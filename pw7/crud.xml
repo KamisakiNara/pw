@@ -46,7 +46,7 @@
             <column name="usia">30</column>
         </table>
         <table name="user">
-            <column name="id">0</column>
+            <column name="id">2</column>
             <column name="nama">Anto</column>
             <column name="alamat">Jogja</column>
             <column name="usia">35</column>

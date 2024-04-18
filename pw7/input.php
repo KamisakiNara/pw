@@ -5,6 +5,10 @@
 	
 <table>
 	<tr>
+		<td>No</td>
+		<td><input type="text" name="id"></td>
+	</tr>
+	<tr>
 		<td>Nama</td>
 		<td><input type="text" name="nama"></td>
 	</tr>

@@ -21,8 +21,8 @@ class database{
  
 	}
  
-	function input($nama,$alamat,$usia){
-		mysql_query("insert into user values('','$nama','$alamat','$usia')");
+	function input($id,$nama,$alamat,$usia){
+		mysql_query("insert into user values('$id','$nama','$alamat','$usia')");
 	}
  
 	function hapus($id){

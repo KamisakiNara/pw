@@ -18,7 +18,7 @@ $db = new database();
 	foreach($db->tampil_data() as $x){
         ?>
 	<tr>
-        <td><?php echo $no++; ?></td>
+        <td><?php echo $x['id']; ?></td>
 		<td><?php echo $x['nama']; ?></td>
 		<td><?php echo $x['alamat']; ?></td>
 		<td><?php echo $x['usia']; ?></td>

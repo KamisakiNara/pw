@@ -12,9 +12,14 @@ foreach($db->edit($_GET['id']) as $d){
 ?>
 <table>
 	<tr>
+	<tr>
+		<td>No</td>
+		<td>
+			<input type="text" name="id" value="<?php echo $d['id'] ?>">
+		</td>
+	</tr>
 		<td>Nama</td>
 		<td>
-			<input type="hidden" name="id" value="<?php echo $d['id'] ?>">
 			<input type="text" name="nama" value="<?php echo $d['nama'] ?>">
 		</td>
 	</tr>
