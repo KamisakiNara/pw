@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Apr 18, 2024 at 06:12 AM
+- Server version: 10.1.37-MariaDB
+- PHP Version: 5.6.40
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="crud_oop" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` int(10) DEFAULT NULL,
+                  `nama` varchar(100) DEFAULT NULL,
+                  `alamat` varchar(100) DEFAULT NULL,
+                  `usia` int(10) NOT NULL,
+                  PRIMARY KEY (`usia`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'crud_oop'
+    -->
+    <database name="crud_oop">
+        <!-- Table user -->
+        <table name="user">
+            <column name="id">1</column>
+            <column name="nama">Andi</column>
+            <column name="alamat">Bandung</column>
+            <column name="usia">20</column>
+        </table>
+        <table name="user">
+            <column name="id">3</column>
+            <column name="nama">Budi</column>
+            <column name="alamat">Jakarta</column>
+            <column name="usia">30</column>
+        </table>
+        <table name="user">
+            <column name="id">0</column>
+            <column name="nama">Anto</column>
+            <column name="alamat">Jogja</column>
+            <column name="usia">35</column>
+        </table>
+    </database>
+</pma_xml_export>
