@@ -1,7 +1,8 @@
-<?php 
+<?php
 include 'database.php';
 $db = new database();
 ?>
+<div id="container">
 <h1>CRUD OOP PHP</h1>
 <h3>Data User</h3>
  
@@ -23,8 +24,8 @@ $db = new database();
 		<td><?php echo $x['alamat']; ?></td>
 		<td><?php echo $x['usia']; ?></td>
 		<td>
-            <a href="edit.php?id=<?php echo $x['id']; ?>&aksi=edit">Edit</a>
-			<a href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus">Hapus</a>			
+            <a class="edit" href="edit.php?id=<?php echo $x['id']; ?>&aksi=edit" title="klik disini">Edit</a>
+			<a class="del" href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus" title="klik disini">Hapus</a>			
 		</td>
 	</tr>
 	<?php 
@@ -32,4 +33,8 @@ $db = new database();
 	?>
 </table>
 <br>
-<a href="input.php">Input Data</a>
+<a class="edit" href="input.php" title="klik disini"><span style="border: 1px solid black;padding :6;">Input Data</span></a>
+</div>
+<link rel="stylesheet" href="style.css">
+<div id="footer"><p>Copyright &copy; 2024 - Muhammad Raihan Syahfitrah - XI Rpl 1</p></div>
+</div>

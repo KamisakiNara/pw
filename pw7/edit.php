@@ -2,22 +2,22 @@
 include 'database.php';
 $db = new database();
 ?>
- 
-<h1>CRUD OOP PHP</h1>
-<h3>Edit Data User</h3>
- 
+ <div id="container">
+	 <h1>CRUD OOP PHP</h1>
+	 <h3>Edit Data User</h3>
+	 
 <form action="proses.php?aksi=update" method="post">
-<?php
+	<?php
 foreach($db->edit($_GET['id']) as $d){
-?>
+	?>
 <table>
 	<tr>
-	<tr>
-		<td>No</td>
-		<td>
-			<input type="text" name="id" value="<?php echo $d['id'] ?>">
-		</td>
-	</tr>
+		<tr>
+			<td>No</td>
+			<td>
+				<input type="text" name="id" value="<?php echo $d['id'] ?>">
+			</td>
+		</tr>
 		<td>Nama</td>
 		<td>
 			<input type="text" name="nama" value="<?php echo $d['nama'] ?>">
@@ -33,8 +33,11 @@ foreach($db->edit($_GET['id']) as $d){
 	</tr>
 	<tr>
 		<td></td>
-		<td><input type="submit" value="Simpan"></td>
+		<td><input class="sim" type="submit" value="Simpan" title="klik disini"></td>
 	</tr>
 </table>
 <?php } ?>
 </form>
+</div>
+<link rel="stylesheet" href="style.css">
+<div id="footer"><p>Copyright &copy; 2024 - Muhammad Raihan Syahfitrah - XI Rpl 1</p></div>
