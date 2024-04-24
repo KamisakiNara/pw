@@ -20,8 +20,8 @@ endif;
 <head>
 	<title>Tutorial PHP : CRUD OOP PHP</title>
 
-	<link href="../assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../../fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -48,7 +48,7 @@ endif;
 						</div>
 						<div class="col-md-4">
 							
-								<button type="submit" class="mt-4 btn btn-md btn-primary"> Simpan</button>
+								<button type="submit" class="mt-4 btn btn-md btn-success"> Simpan</button>
 						
 						</div>
 					</div>
@@ -71,8 +71,8 @@ endif;
 					<td><?php echo $row['nis']; ?></td>
 					<td><?php echo $row['nama']; ?></td>
 					<td>
-						<?php echo "<a class='btn btn-sm btn-primary' href='edit.php?nis=".$row['nis']."'>edit</a>"; ?>
-						<?php echo "<a class='btn btn-sm btn-primary' href='delete.php?nis=".$row['nis']."'>delete</a>"; ?>
+						<?php echo "<a class='btn btn-sm btn-secondary' href='edit.php?nis=".$row['nis']."'>edit</a>"; ?>
+						<?php echo "<a class='btn btn-sm btn-danger' href='delete.php?nis=".$row['nis']."'>delete</a>"; ?>
 					</td>
 				</tr>
 				<?php $no+=1; }?>
