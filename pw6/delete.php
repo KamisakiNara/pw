@@ -22,8 +22,8 @@ endif;
 <head>
 	<title>Tutorial PHP : CRUD OOP PHP</title>
 
-	<link href="../assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
