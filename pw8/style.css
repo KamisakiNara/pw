@@ -1,4 +1,8 @@
-a {
-    color: white;
-    text-decoration: none;
-}
+body{margin:0;padding:0;width:100%;font:15px Arial;}
+#container{margin: 5;}
+#footer{background:#f0f0f0;position:absolute;bottom:0;width:100%;
+   text-align:center;color:#464646; font-weight: bold;}
+a{text-decoration: none; color: black;}
+.sim{background-color: #35f32e; padding: 4;margin-top: 10;}
+.del{color: #fb2e2e; margin: 5;}
+.edit{color: #897900; margin: 5;}

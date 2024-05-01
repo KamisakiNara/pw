@@ -11,7 +11,7 @@ function validateName() {
         nameError.innerHTML = 'Nama diperlukan';
         return false;
     }
-    if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]+$/)) {
         nameError.innerHTML = 'Tulis nama lengkap';
         return false;
     }

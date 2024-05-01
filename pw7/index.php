@@ -25,7 +25,7 @@ $db = new database();
 		<td><?php echo $x['usia']; ?></td>
 		<td>
             <a class="edit" href="edit.php?id=<?php echo $x['id']; ?>&aksi=edit" title="klik disini">Edit</a>
-			<a class="del" href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus" title="klik disini">Hapus</a>			
+			<a class="del" href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus" onclick="return confirm('Are you sure you want to delete this item?');" title="klik disini">Hapus</a>			
 		</td>
 	</tr>
 	<?php 

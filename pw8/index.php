@@ -1,109 +1,42 @@
 <?php
-
-require_once ('koneksi.php');
-require_once ('sql.php');
-
-$obj = new crud;
-if($_SERVER['REQUEST_METHOD']=='POST'):
-	$id_barang  = $_POST['id_barang'];
-	$kode_barang = $_POST['kode_barang'];
-	$nama_barang = $_POST['nama_barang'];
-	$jumlah = $_POST['jumlah'];
-	$harga = $_POST['harga'];
-	if($obj->insertData($id_barang, $kode_barang, $nama_barang, $jumlah, $harga)):
-		echo '<div class="alert alert-success">Data berhasil disimpan</div>';
-	else:
-
-		echo '<div class="alert alert-danger">Data gagal disimpan</div>';
-	endif;
-endif;
+include 'database.php';
+$db = new database();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Toko ATK</title>
-	<link href="../../fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
-	<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-	<div class="container">
-		<div class="card shadow mb-4 mt-4">
-	            <div class="card-header py-3">
-	                <h6 class="m-0 font-weight-bold text-primary">Toko Alat Tulis Kantor</h6>
-	            </div>
-	        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		        <div class="card-body">
-					<div class="row">
-						
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>id_barang :</label>
-								<input type="text" class="form-control" name="id_barang"/>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>kode_barang :</label>
-								<input type="text" class="form-control" name="kode_barang"/>
-							</div>
-						</div>
-                        <div class="col-md-4">
-							<div class="form-group">
-								<label>nama_barang :</label>
-								<input type="text" class="form-control" name="nama_barang"/>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>jumlah :</label>
-								<input type="text" class="form-control" name="jumlah"/>
-							</div>
-						</div><div class="col-md-4">
-							<div class="form-group">
-								<label>harga (Rp) :</label>
-								<input type="text" class="form-control" name="harga"/>
-							</div>
-						</div>
-						<div class="col-md-4">
-							
-								<button type="submit" class="mt-4 btn btn-md btn-success"> Simpan</button>
-						
-						</div>
-					</div>
-				</div>
-			</form>
-			<table class="table table-striped">
-				<tr>
-					<th>No</th>
-					<th>id_barang</th>
-					<th>kode_barang</th>
-					<th>nama_barang</th>
-					<th>jumlah</th>
-					<th>harga (Rp)</th>
-					<th>Aksi</th>
-				</tr>
-				<?php 
-					$data=$obj->tampilbarang();
-					while($row=$data->fetch_array()){
-				?>
-				<tr>
-					<td><?php echo $row['id_barang']; ?></td>
-					<td><?php echo $row['kode_barang']; ?></td>
-                    <td><?php echo $row['nama_barang']; ?></td>
-                    <td><?php echo $row['jumlah']; ?></td>
-                    <td><?php echo $row['harga']; ?></td>
-					<td>
-						<?php echo "<a class='btn btn-sm btn-secondary' href='edit.php?id_barang=".$row['id_barang']."'>edit</a>"; ?>
-						<?php echo "<a class='btn btn-sm btn-danger' href='delete.php?id_barang=".$row['id_barang']."'>delete</a>"; ?>
-					</td>
-				</tr>
-				<?php } ?>
-			</table>
-		</div>
-	</div>
-
-<script src="../jquery/jquery.min.js"></script>
-<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<div id="container">
+<h1>CRUD OOP PHP</h1>
+<h3>Data User</h3>
+ 
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Kode Barang</th>
+		<th>Nama Barang</th>
+		<th>Jumlah</th>
+		<th>Harga</th>
+		<th>Opsi</th>
+	</tr>
+	<?php
+	$no = 1;
+	foreach($db->tampil_data() as $x){
+        ?>
+	<tr>
+        <td><?php echo $x['id_barang']; ?></td>
+		<td><?php echo $x['kode_barang']; ?></td>
+		<td><?php echo $x['nama_barang']; ?></td>
+		<td><?php echo $x['jumlah']; ?></td>
+		<td><?php echo $x['harga']; ?></td>
+		<td>
+            <a class="edit" href="edit.php?id_barang=<?php echo $x['id_barang']; ?>&aksi=edit" title="klik disini">Edit</a>
+			<a class="del" href="proses.php?id_barang=<?php echo $x['id_barang']; ?>&aksi=hapus" onclick="return confirm('Are you sure you want to delete this item?');" title="klik disini">Hapus</a>			
+		</td>
+	</tr>
+	<?php 
+	}
+	?>
+</table>
+<br>
+<a class="edit" href="input.php" title="klik disini"><span style="border: 1px solid black;padding :6;">Input Data</span></a>
+</div>
+<link rel="stylesheet" href="style.css">
+<div id="footer"><p>Copyright &copy; 2024 - Muhammad Raihan Syahfitrah - XI Rpl 1</p></div>
+</div>
