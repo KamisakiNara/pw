@@ -1,4 +1,18 @@
 body{margin:0;padding:0;width:100%;font:15px Arial;}
+
+
+#submit-error{
+    color: red;
+}
+
+span {
+    color: red;
+}
+
+span i {
+    color: green;
+}
+
 #container{margin: 5;}
 #footer{background:#f0f0f0;position:absolute;bottom:0;width:100%;
    text-align:center;color:#464646; font-weight: bold;}

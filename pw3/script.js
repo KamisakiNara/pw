@@ -15,7 +15,7 @@ function validateName() {
         nameError.innerHTML = 'Tulis nama lengkap';
         return false;
     }
-    nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+    nameError.innerHTML = '<i class="fas fa-check-circle" ></i>';
     return true;
 }
 

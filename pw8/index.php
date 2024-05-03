@@ -27,7 +27,7 @@ $db = new database();
 		<td><?php echo $x['harga']; ?></td>
 		<td>
             <a class="edit" href="edit.php?id_barang=<?php echo $x['id_barang']; ?>&aksi=edit" title="klik disini">Edit</a>
-			<a class="del" href="proses.php?id_barang=<?php echo $x['id_barang']; ?>&aksi=hapus" onclick="return confirm('Are you sure you want to delete this item?');" title="klik disini">Hapus</a>			
+			<a class="del" href="proses.php?id_barang=<?php echo $x['id_barang']; ?>&aksi=hapus" onclick="return confirm('Apakah kamu akan menghapus item ini?');" title="klik disini">Hapus</a>			
 		</td>
 	</tr>
 	<?php 
@@ -35,8 +35,9 @@ $db = new database();
 	?>
 </table>
 <br>
-<a class="edit" href="input.php" title="klik disini"><span style="border: 1px solid black;padding :6;">Input Data</span></a>
+<a style="border: 1px solid black;padding :6;" class="edit" href="input.php" title="klik disini">Input Data</a>
 </div>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../fontawesome/css/all.min.css">
 <div id="footer"><p>Copyright &copy; 2024 - Muhammad Raihan Syahfitrah - XI Rpl 1</p></div>
 </div>

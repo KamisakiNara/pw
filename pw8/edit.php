@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../fontawesome/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <?php 
 include 'database.php';
@@ -16,32 +17,34 @@ $db = new database();
             <tr>
                 <td>Id</td>
                 <td>
-                    <input type="text" name="id_barang" value="<?php echo $d['id_barang'] ?>">
+                    <input type="text" name="id_barang" id="id-key" value="<?php echo $d['id_barang'] ?>" onkeyup="validateId()">
+					<td><span  id="id-error"></span></td>
                 </td>
             </tr>
             <tr>
                 <td>Kode Barang</td>
-                <td>
-                    <input type="text" name="kode_barang" value="<?php echo $d['kode_barang'] ?>">
-                </td>
+                <td><input type="text" name="kode_barang" id="kode-key" value="<?php echo $d['kode_barang'] ?>" onkeyup="validateKode()"></td>
+				<td><span id="kode-error"></span></td>
             </tr>
             <tr>
                 <td>Nama Barang</td>
-                <td>
-                    <input type="text" name="nama_barang" value="<?php echo $d['nama_barang'] ?>">
-                </td>
+                <td><input type="text" name="nama_barang" id="nama-key" value="<?php echo $d['nama_barang'] ?>" onkeyup="validateNama()"></td>
+				<td><span id="nama-error"></span></td>
             </tr>
             <tr>
                 <td>Jumlah</td>
-                <td><input type="text" name="jumlah" value="<?php echo $d['jumlah'] ?>"></td>
+                <td><input type="text" name="jumlah" id="jumlah-key" value="<?php echo $d['jumlah'] ?>" onkeyup="validateJml()"></td>
+				<td><span id="jumlah-error"></span></td>
             </tr>
             <tr>
-                <td>Harga (Rp)</td>
-                <td><input type="text" name="harga" value="<?php echo $d['harga'] ?>"></td>
+                <td>Harga (Rp.)</td>
+                <td><input type="text" name="harga" id="harga-key" value="<?php echo $d['harga'] ?>" onkeyup="validateHrg()"></td>
+					<td><span id="harga-error"></span></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input class="sim" type="submit" value="Simpan" title="klik disini"></td>
+                <td><input class="sim" type="submit" value="Simpan" title="klik disini" onclick="return validateForm()"></td>
+					<span id="submit-error"></span>
             </tr>
         </table>
         <?php 
@@ -52,4 +55,5 @@ $db = new database();
         ?>
     </form>
 </div>
+<script src="script.js"></script>
 <div id="footer"><p>Copyright &copy; 2024 - Muhammad Raihan Syahfitrah - XI Rpl 1</p></div>
