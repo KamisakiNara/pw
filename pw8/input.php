@@ -1,12 +1,15 @@
-<link rel="stylesheet" href="../fontawesome/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../fontawesome/css/all.min.css">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <div id="container">
-	<h1>CRUD OOP PHP</h1>
-	<h3>Tambah Data User</h3>
+<div class="card-header py-3">
+	<h1 class="m-0 font-weight-bold text-primary">CRUD OOP PHP</h1>
+	<h3 class="m-0 font-weight-bold text-primary">Data User</h3>
+</div>
 	
+	<div class="card mb-4 mt-5">
 	<form action="proses.php?aksi=tambah" method="post">
-		<table>
-			<div class="text-group">
+		<table class="table">
 				<tr>
 					<td>Id</td>
 					<td><input type="text" name="id_barang" id="id-key" onkeyup="validateId()"></td>
@@ -34,12 +37,12 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><button id="sim" type="submit" title="klik disini" onclick="return validateForm()">Simpan</button></td>
-					<span id="submit-error"></span>
+					<td><button class="btn btn-success" id="sim" type="submit" title="klik disini" onclick="return validateForm()">Simpan</button></td>
+					<td><span id="submit-error"></span></td>
 				</tr>
-			</div>
 		</table>
 	</form>
+</div>
 </div>
 
 <script src="script.js"></script>
