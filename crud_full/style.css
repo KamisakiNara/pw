@@ -1,0 +1,20 @@
+body{margin:0;padding:0;width:100%;font:15px Arial;}
+
+
+#submit-error{
+    color: red;
+}
+
+span {
+    color: red;
+}
+
+span i {
+    color: green;
+}
+
+#container{margin: 5;}
+a{text-decoration: none;}
+.sim{background-color: #35f32e; padding: 4;margin-top: 10;}
+.del{color: #fb2e2e; margin: 5;}
+.edit{color: #897900; margin: 5;}
